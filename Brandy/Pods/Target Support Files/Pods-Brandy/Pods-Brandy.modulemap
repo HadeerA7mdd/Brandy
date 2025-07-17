@@ -1,0 +1,6 @@
+framework module Pods_Brandy {
+  umbrella header "Pods-Brandy-umbrella.h"
+
+  export *
+  module * { export * }
+}

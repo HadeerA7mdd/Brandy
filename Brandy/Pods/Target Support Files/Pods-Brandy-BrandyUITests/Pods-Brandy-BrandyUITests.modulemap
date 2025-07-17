@@ -1,0 +1,6 @@
+framework module Pods_Brandy_BrandyUITests {
+  umbrella header "Pods-Brandy-BrandyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
