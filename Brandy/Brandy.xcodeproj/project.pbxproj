@@ -16,6 +16,8 @@
 		18C9BF382E29144600DA454D /* BrandyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9BF372E29144600DA454D /* BrandyTests.swift */; };
 		18C9BF422E29144600DA454D /* BrandyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9BF412E29144600DA454D /* BrandyUITests.swift */; };
 		18C9BF442E29144600DA454D /* BrandyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9BF432E29144600DA454D /* BrandyUITestsLaunchTests.swift */; };
+		18C9BF522E29157100DA454D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18C9BF512E29157100DA454D /* SDWebImage */; };
+		18C9BF552E29158B00DA454D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18C9BF542E29158B00DA454D /* Alamofire */; };
 		42CCA59E8D8B84F07FBA196C /* Pods_Brandy_BrandyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924C9F2EFE7E6BF77D1A5FC6 /* Pods_Brandy_BrandyUITests.framework */; };
 		7A622BBBD9E3EBA4FB7F2886 /* Pods_Brandy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9358EFB61A92A38E31DD47FB /* Pods_Brandy.framework */; };
 		A2DD219BECE4677D0BB79392 /* Pods_BrandyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0731EFF94C60A73F8319F506 /* Pods_BrandyTests.framework */; };
@@ -68,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C9BF552E29158B00DA454D /* Alamofire in Frameworks */,
+				18C9BF522E29157100DA454D /* SDWebImage in Frameworks */,
 				7A622BBBD9E3EBA4FB7F2886 /* Pods_Brandy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,7 +168,6 @@
 				4D6458FF65FE09985D608558 /* Pods-BrandyTests.debug.xcconfig */,
 				FAE6FCA9D50BFE46AC01CC70 /* Pods-BrandyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -186,6 +189,10 @@
 			dependencies = (
 			);
 			name = Brandy;
+			packageProductDependencies = (
+				18C9BF512E29157100DA454D /* SDWebImage */,
+				18C9BF542E29158B00DA454D /* Alamofire */,
+			);
 			productName = Brandy;
 			productReference = 18C9BF1D2E29144300DA454D /* Brandy.app */;
 			productType = "com.apple.product-type.application";
@@ -261,6 +268,10 @@
 				Base,
 			);
 			mainGroup = 18C9BF142E29144300DA454D;
+			packageReferences = (
+				18C9BF502E29157100DA454D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				18C9BF532E29158B00DA454D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 18C9BF1E2E29144300DA454D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -770,6 +781,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18C9BF502E29157100DA454D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.1;
+			};
+		};
+		18C9BF532E29158B00DA454D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18C9BF512E29157100DA454D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C9BF502E29157100DA454D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		18C9BF542E29158B00DA454D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18C9BF532E29158B00DA454D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18C9BF152E29144300DA454D /* Project object */;
 }
