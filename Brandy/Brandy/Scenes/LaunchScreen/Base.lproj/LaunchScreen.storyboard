@@ -20,11 +20,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rCJ-I3-bL0">
                                 <rect key="frame" x="76.666666666666686" y="340" width="240" height="222.33333333333337"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-UU-QfR">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="TdQ-RE-ziO">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="180"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="180" id="DxH-l2-ssa"/>
-                                            <constraint firstAttribute="width" constant="240" id="aD7-wd-pPj"/>
+                                            <constraint firstAttribute="height" constant="180" id="eOc-gY-jYe"/>
+                                            <constraint firstAttribute="width" constant="240" id="jzE-5g-SOP"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brandy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOv-w1-xpg">
