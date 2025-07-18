@@ -153,6 +153,9 @@
 		1830F8082E2A1C1A006CD74C /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				1830F8182E2A2A5D006CD74C /* ViewModel */,
+				1830F8172E2A2A55006CD74C /* View */,
+				1830F8162E2A2A48006CD74C /* Model */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -171,6 +174,27 @@
 			children = (
 			);
 			path = ProductDetailsScreen;
+			sourceTree = "<group>";
+		};
+		1830F8162E2A2A48006CD74C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1830F8172E2A2A55006CD74C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1830F8182E2A2A5D006CD74C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		18C9BF142E29144300DA454D = {
