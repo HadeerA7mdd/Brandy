@@ -192,6 +192,9 @@
 		1830F8172E2A2A55006CD74C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1830F8262E2A3276006CD74C /* Cell */,
+				1830F8272E2A3276006CD74C /* Controller */,
+				1830F8282E2A3276006CD74C /* Storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +214,29 @@
 				1830F81C2E2A2B1D006CD74C /* URLs.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		1830F8262E2A3276006CD74C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1830F8272E2A3276006CD74C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18C9BF242E29144400DA454D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1830F8282E2A3276006CD74C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				18C9BF262E29144400DA454D /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		18C9BF142E29144300DA454D = {
@@ -242,8 +268,6 @@
 				1830F80B2E2A209E006CD74C /* Base */,
 				1830F8062E2A1BCF006CD74C /* Scenes */,
 				1830F7FA2E2A1867006CD74C /* Helper */,
-				18C9BF242E29144400DA454D /* ViewController.swift */,
-				18C9BF262E29144400DA454D /* Main.storyboard */,
 				1830F8192E2A2A8C006CD74C /* NetworkLayer */,
 				18C9BF2E2E29144500DA454D /* Info.plist */,
 			);
