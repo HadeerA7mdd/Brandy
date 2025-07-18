@@ -7,7 +7,7 @@ target 'Brandy' do
 
   # Pods for Brandy
 
-    pod 'NVActivityIndicatorView'
+    pod 'SkeletonView'
     pod 'CDAlertView'
 
   target 'BrandyTests' do

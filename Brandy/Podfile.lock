@@ -1,22 +1,20 @@
 PODS:
   - CDAlertView (0.11.0)
-  - NVActivityIndicatorView (5.2.0):
-    - NVActivityIndicatorView/Base (= 5.2.0)
-  - NVActivityIndicatorView/Base (5.2.0)
+  - SkeletonView (1.30.4)
 
 DEPENDENCIES:
   - CDAlertView
-  - NVActivityIndicatorView
+  - SkeletonView
 
 SPEC REPOS:
   trunk:
     - CDAlertView
-    - NVActivityIndicatorView
+    - SkeletonView
 
 SPEC CHECKSUMS:
   CDAlertView: cd6624e857c85ad14560e2cd23d7eb25b983b590
-  NVActivityIndicatorView: fe52a6a68664c2df8991d7d9e3d86d8d19453c53
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
 
-PODFILE CHECKSUM: 7741483f11cc889cf49b65708ff86d370a03a899
+PODFILE CHECKSUM: cc291e0ea8056234c6ab86f8528a96980e8e7d2f
 
 COCOAPODS: 1.16.2
