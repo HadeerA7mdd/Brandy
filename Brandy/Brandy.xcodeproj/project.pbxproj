@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1830F8012E2A1963006CD74C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830F7FD2E2A1963006CD74C /* AlertView.swift */; };
+		1830F8032E2A1963006CD74C /* Viewcontroller+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830F7FF2E2A1963006CD74C /* Viewcontroller+EXT.swift */; };
+		1830F8052E2A1A3C006CD74C /* TableView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830F8042E2A1A27006CD74C /* TableView+EXT.swift */; };
 		18C9BF212E29144400DA454D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9BF202E29144400DA454D /* AppDelegate.swift */; };
 		18C9BF232E29144400DA454D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9BF222E29144400DA454D /* SceneDelegate.swift */; };
 		18C9BF252E29144400DA454D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9BF242E29144400DA454D /* ViewController.swift */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		0731EFF94C60A73F8319F506 /* Pods_BrandyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrandyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE3C7AC44E003E86D55E84F /* Pods-Brandy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brandy.debug.xcconfig"; path = "Target Support Files/Pods-Brandy/Pods-Brandy.debug.xcconfig"; sourceTree = "<group>"; };
+		1830F7FD2E2A1963006CD74C /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		1830F7FF2E2A1963006CD74C /* Viewcontroller+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Viewcontroller+EXT.swift"; sourceTree = "<group>"; };
+		1830F8042E2A1A27006CD74C /* TableView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+EXT.swift"; sourceTree = "<group>"; };
 		18C9BF1D2E29144300DA454D /* Brandy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brandy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C9BF202E29144400DA454D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C9BF222E29144400DA454D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +101,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1830F7FA2E2A1867006CD74C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1830F7FE2E2A1963006CD74C /* Alerts */,
+				1830F8002E2A1963006CD74C /* Extensions */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1830F7FE2E2A1963006CD74C /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				1830F7FD2E2A1963006CD74C /* AlertView.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		1830F8002E2A1963006CD74C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1830F7FF2E2A1963006CD74C /* Viewcontroller+EXT.swift */,
+				1830F8042E2A1A27006CD74C /* TableView+EXT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		18C9BF142E29144300DA454D = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +152,7 @@
 		18C9BF1F2E29144300DA454D /* Brandy */ = {
 			isa = PBXGroup;
 			children = (
+				1830F7FA2E2A1867006CD74C /* Helper */,
 				18C9BF202E29144400DA454D /* AppDelegate.swift */,
 				18C9BF222E29144400DA454D /* SceneDelegate.swift */,
 				18C9BF242E29144400DA454D /* ViewController.swift */,
@@ -385,9 +418,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Brandy/Pods-Brandy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Brandy/Pods-Brandy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -402,9 +439,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Brandy-BrandyUITests/Pods-Brandy-BrandyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Brandy-BrandyUITests/Pods-Brandy-BrandyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -419,7 +460,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C9BF252E29144400DA454D /* ViewController.swift in Sources */,
+				1830F8052E2A1A3C006CD74C /* TableView+EXT.swift in Sources */,
 				18C9BF212E29144400DA454D /* AppDelegate.swift in Sources */,
+				1830F8012E2A1963006CD74C /* AlertView.swift in Sources */,
+				1830F8032E2A1963006CD74C /* Viewcontroller+EXT.swift in Sources */,
 				18C9BF232E29144400DA454D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
