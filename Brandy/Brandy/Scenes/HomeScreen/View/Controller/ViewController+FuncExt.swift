@@ -66,4 +66,18 @@ extension ViewController{
 
         return layout
     }
+    
+    func showLoadingSkeleton() {
+        isSkeletonActive = true
+        homeCollection.isSkeletonable = true
+        homeCollection.showAnimatedGradientSkeleton()
+    }
+
+    func hideSkeletonAndLoadData() {
+        isSkeletonActive = false
+        homeCollection.stopSkeletonAnimation()
+        view.hideSkeleton()
+        homeCollection.reloadData()
+    }
+
 }
