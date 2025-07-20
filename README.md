@@ -62,3 +62,14 @@ Implemented using the **MVVM (Model-View-ViewModel)** pattern for maintainabilit
 - Alerts on request failure with retry logic
 
 
+## Screenshots
+
+/Users/hader/Desktop/Simulator Screenshot - iPhone 16 Plus - 2025-07-20 at 14.03.16.png
+
+/Users/hader/Desktop/Simulator Screenshot - iPhone 16 Plus - 2025-07-20 at 16.44.32.png
+
+/Users/hader/Desktop/Simulator Screenshot - iPhone 16 Plus - 2025-07-20 at 16.44.42.png
+
+/Users/hader/Desktop/Simulator Screenshot - iPhone 16 Plus - 2025-07-20 at 16.44.56.png
+
+/Users/hader/Desktop/Simulator Screenshot - iPhone 16 Plus - 2025-07-20 at 16.45.03.png
