@@ -8,7 +8,7 @@
 import UIKit
 
 enum AppStoryboard : String {
-    case Streak
+    case ProductDetails
    
     var instance : UIStoryboard {
         
@@ -41,7 +41,4 @@ extension UIViewController {
         return appStoryboard.viewController(viewControllerClass: self)
     }
 }
-//        let vc = AppStoryboard.ItemPopup.viewController(viewControllerClass: ItemPopupViewController.self)
 
-//let vc = AppStoryboard.Profile.viewController(viewControllerClass: ProfileViewController.self)
-//navigationController?.pushViewController(vc, animated: true)

@@ -48,7 +48,11 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate ,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("tappedd")
+        if let productt = homeViewModelProtocol.getProductByIndex(index: indexPath.row){
+            let vc = AppStoryboard.ProductDetails.viewController(viewControllerClass: ProductDetailsViewController.self)
+            vc.productDetails = productt
+            push(vc)
+        }
     }
 }
 
