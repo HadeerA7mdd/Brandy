@@ -15,7 +15,7 @@ class HomeUsecase{
                    callBack: @escaping (Result<[Product], Error>) -> Void) {
         
         Request.request(url: URLs.Instance.getHomeProducts(limit: page),
-                        save: false,
+                        save: true,
                         method: .get,
                         parameters: nil,
                         encoding: URLEncoding.default,

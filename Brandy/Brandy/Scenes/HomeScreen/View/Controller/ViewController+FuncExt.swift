@@ -57,9 +57,9 @@ extension ViewController{
         layout.minimumInteritemSpacing = spacing
         
         if isGridView {
-            layout.itemSize = CGSize(width: homeCollection.frame.width / 2.25, height: homeCollection.frame.height / 2.4)
+            layout.itemSize = CGSize(width: homeCollection.frame.width / 2.219, height: homeCollection.frame.height / 2.4)
         } else {
-            layout.itemSize = CGSize(width: homeCollection.frame.width, height: homeCollection.frame.height / 3.2)
+            layout.itemSize = CGSize(width: homeCollection.frame.width, height: 156)
         }
         
         return layout

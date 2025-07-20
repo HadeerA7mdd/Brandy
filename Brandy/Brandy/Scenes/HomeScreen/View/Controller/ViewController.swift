@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         
         homeViewModelProtocol.bindErrorResultToViewController = { [weak self] msg in
             self?.hideSkeletonAndLoadData()
-            print("errorr \(msg)")
+            AlertView.showConfirmAlert(on: self ?? ViewController() , title: msg, message: "")
         }
         homeViewModelProtocol.showLoadingIndicator = { [weak self] isLoading in
             DispatchQueue.main.async { [weak self]  in
