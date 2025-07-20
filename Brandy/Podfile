@@ -8,7 +8,6 @@ target 'Brandy' do
   # Pods for Brandy
 
     pod 'SkeletonView'
-    pod 'CDAlertView'
 
   target 'BrandyTests' do
     inherit! :search_paths
