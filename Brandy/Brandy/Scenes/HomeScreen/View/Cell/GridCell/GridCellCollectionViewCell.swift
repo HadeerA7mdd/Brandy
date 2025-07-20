@@ -20,5 +20,12 @@ class GridCellCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    func setupCell(productData : Product){
+        productPrice.text = "\(productData.price ?? 0.0)"
+        productReviewCount.text = "(\(productData.rating?.count ?? 0))"
+        productRate.text = "\(productData.rating?.rate ?? 0.0)"
+        productName.text = productData.title ?? ""
+        productImg.setSdImage(urlImage: productData.image ?? "")
+    }
 }

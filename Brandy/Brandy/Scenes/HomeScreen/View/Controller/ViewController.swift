@@ -11,26 +11,48 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var homeCollection: UICollectionView!
     
-     var isGridView = false
-     var toggleButton: UIButton!
+    var homeViewModelProtocol: HomeViewModelProtocol = HomeViewModel()
+    var isGridView = false
+    var toggleButton: UIButton!
     var isSkeletonActive = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupToggleButton()
         setupCollectionView()
         setupLogoImg()
+        homeViewModelProtocol.getProducts()
+        bindViewModel()
+        setupToggleButton()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        showLoadingSkeleton()
-    }
+       
 
-    override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 50) { [self] in
-            hideSkeletonAndLoadData()
+    }
+    
+    
+    func bindViewModel(){
+        homeViewModelProtocol.bindSucessResultToViewController = { [weak self] in
+            self?.hideSkeletonAndLoadData()
+            self?.homeCollection.reloadData()
+        }
+        
+        homeViewModelProtocol.bindErrorResultToViewController = { [weak self] msg in
+            self?.hideSkeletonAndLoadData()
+            print("errorr \(msg)")
+        }
+        homeViewModelProtocol.showLoadingIndicator = { [weak self] isLoading in
+            DispatchQueue.main.async { [weak self]  in
+                if isLoading {
+                    self?.showLoadingSkeleton()
+                } else {
+                    self?.hideSkeletonAndLoadData()
+                }
+            }
         }
     }
+    
 }
+
 
