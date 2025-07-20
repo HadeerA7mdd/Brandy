@@ -38,9 +38,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate ,
         : String(describing: ListCellCollectionViewCell.self)
     }
     
-    // Skeleton item count
     func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7 // fake loading count
+        return 7 
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

@@ -40,13 +40,12 @@ class ProductDetailsViewController: UIViewController {
 }
 
 
+// MARK: - UIScrollView Delegate extension
 
 extension ProductDetailsViewController :UIScrollViewDelegate{
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
-
-        // Only shrink, never expand
         let newHeight = max(minImageHeight, maxImageHeight - offset)
         imgHeight.constant = newHeight
         UIView.animate(withDuration: 0.1) {

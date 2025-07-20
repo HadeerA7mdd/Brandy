@@ -55,7 +55,6 @@ class HomeViewModel: HomeViewModelProtocol{
     }
     
     func handleData(data: [Product]?){
-      
         if currentPage == 7{
             self.movieData = data
         }else{

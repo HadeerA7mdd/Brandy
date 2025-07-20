@@ -28,7 +28,7 @@ class URLs {
     
 
     func getHomeProducts(limit : Int) -> String {
-        return url + "products?imit=\(limit)"
+        return url + "products?limit=\(limit)"
     }
 
 

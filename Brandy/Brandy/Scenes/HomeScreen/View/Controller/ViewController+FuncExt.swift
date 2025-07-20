@@ -10,6 +10,8 @@ import UIKit
 
 extension ViewController{
     
+    // MARK: - collection delegate , dataSource and register custom cell
+    
     func setupCollectionView() {
         homeCollection.dataSource = self
         homeCollection.delegate = self
@@ -17,6 +19,8 @@ extension ViewController{
         homeCollection.registerCellNib(cellClass: GridCellCollectionViewCell.self)
         homeCollection.collectionViewLayout = createLayout()
     }
+    
+    // MARK: - setup nav bar icon and list / grid toggle button
     
     func setupToggleButton() {
         toggleButton = UIButton(type: .custom)
@@ -34,7 +38,6 @@ extension ViewController{
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: logoImage)
         
     }
-    
     
     @objc func toggleLayout() {
         isGridView.toggle()
@@ -64,6 +67,8 @@ extension ViewController{
         
         return layout
     }
+   
+    // MARK: - show / hide skelteon
     
     func showLoadingSkeleton() {
         isSkeletonActive = true
@@ -77,5 +82,29 @@ extension ViewController{
         view.hideSkeleton()
         homeCollection.reloadData()
     }
+    
+    // MARK: - bind Data
+    
+    func bindViewModel(){
+        homeViewModelProtocol.bindSucessResultToViewController = { [weak self] in
+            self?.hideSkeletonAndLoadData()
+            self?.homeCollection.reloadData()
+        }
+        
+        homeViewModelProtocol.bindErrorResultToViewController = { [weak self] msg in
+            self?.hideSkeletonAndLoadData()
+            AlertView.showConfirmAlert(on: self ?? ViewController() , title: msg, message: "")
+        }
+        homeViewModelProtocol.showLoadingIndicator = { [weak self] isLoading in
+            DispatchQueue.main.async { [weak self]  in
+                if isLoading {
+                    self?.showLoadingSkeleton()
+                } else {
+                    self?.hideSkeletonAndLoadData()
+                }
+            }
+        }
+    }
+    
     
 }

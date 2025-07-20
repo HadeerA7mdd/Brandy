@@ -25,33 +25,6 @@ class ViewController: UIViewController {
         setupToggleButton()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-       
-
-    }
-    
-    
-    func bindViewModel(){
-        homeViewModelProtocol.bindSucessResultToViewController = { [weak self] in
-            self?.hideSkeletonAndLoadData()
-            self?.homeCollection.reloadData()
-        }
-        
-        homeViewModelProtocol.bindErrorResultToViewController = { [weak self] msg in
-            self?.hideSkeletonAndLoadData()
-            AlertView.showConfirmAlert(on: self ?? ViewController() , title: msg, message: "")
-        }
-        homeViewModelProtocol.showLoadingIndicator = { [weak self] isLoading in
-            DispatchQueue.main.async { [weak self]  in
-                if isLoading {
-                    self?.showLoadingSkeleton()
-                } else {
-                    self?.hideSkeletonAndLoadData()
-                }
-            }
-        }
-    }
     
 }
 
